@@ -1,0 +1,44 @@
+{
+    "name": "scolib/laravel-easy-sms",
+    "type": "library",
+    "description": "easy-sms for laravel",
+    "keywords": [
+        "scolib",
+        "laravel-easy-sms"
+    ],
+    "homepage": "https://github.com/scolib/laravel-easy-sms",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "klgd",
+            "email": "slice1213@gmail.com",
+            "homepage": "https://github.com/klgd",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "~7.1",
+        "overtrue/easy-sms": "^1.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Sco\\LaravelEasySms\\": "src"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Sco\\LaravelEasySms\\LaravelServiceProvider"
+            ],
+            "aliases": {
+                "EasySms": "Sco\\LaravelEasySms\\EasySmsFacade"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
