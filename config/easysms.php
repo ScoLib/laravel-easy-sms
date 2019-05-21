@@ -9,24 +9,22 @@ return [
         'strategy' => \Overtrue\EasySms\Strategies\OrderStrategy::class,
 
         // 默认可用的发送网关
-        'gateways' => [
-            'yunpian', 'aliyun',
-        ],
+        'gateways' => explode(',', env('EASYSMS_DEFAULT_GATEWAYS', 'yunpian,aliyun,errorlog')),
     ],
     // 可用的网关配置
-    // 更多配置见： https://github.com/overtrue/easy-sms/blob/master/README.md
     'gateways' => [
         'errorlog' => [
             'file' => storage_path('logs/easy-sms.log'),
         ],
         'yunpian' => [
-            'api_key' => '',
+            'api_key' => env('EASYSMS_YUNPIAN_API_KEY', ''),
         ],
         'aliyun' => [
-            'access_key_id' => '',
-            'access_key_secret' => '',
-            'sign_name' => '',
+            'access_key_id' => env('EASYSMS_ALIYUN_ACCESS_KEY_ID', ''),
+            'access_key_secret' => env('EASYSMS_ALIYUN_ACCESS_KEY_SECRET', ''),
+            'sign_name' => env('EASYSMS_ALIYUN_SIGN_NAME', ''),
         ],
         //...
+        // 更多配置见： https://github.com/overtrue/easy-sms/blob/master/README.md
     ],
 ];
