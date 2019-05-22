@@ -58,13 +58,11 @@ If you discover any security related issues, please email slice1213@gmail.com in
 
 ## Credits
 
-- [klgd][link-author]
-- [All Contributors][link-contributors]
-
+- [klgd](https://github.com/klgd)
+- [All Contributors](../../contributors)
 
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
 
